@@ -187,7 +187,7 @@ open class VideoPlayerView: UIView {
         self.player?.currentItem?.cancelPendingSeeks()
         self.player?.currentItem?.asset.cancelLoading()
         
-        let player = AVPlayer()
+        let player = self.player ?? AVPlayer()
         player.automaticallyWaitsToMinimizeStalling = false
         
         let playerItem = AVPlayerItem(loader: url)
